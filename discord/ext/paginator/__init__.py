@@ -3,6 +3,8 @@ from discord.ext import commands
 from typing import Union, List, Optional
 from contextlib import suppress
 
+
+
 class Paginator:
 	
 	__slots__ = ('_pages', 'index', 'current', 'timeout', 'ctx', 'message', 'compact', '_buttons',)
@@ -60,10 +62,11 @@ class Paginator:
 		    			self.current = len(self._pages)
 		    			await self.message.edit(embed=self._pages[self.current-1])
 		    		if str(reaction.emoji) == "⏪":
+		    			self.current = len(self._pages)-len(self._pages)
 		    			await self.message.edit(embed=self._pages[self.current-1])		    				
 		    	except:
 		    		with suppress(discord.Forbidden, discord.HTTPException):
 		    			for b in self._buttons:
 		    				await self.message.remove_reaction(b, self.ctx.bot.user)
 		    				
-		    		break
+		    break
