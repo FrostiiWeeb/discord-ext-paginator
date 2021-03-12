@@ -22,17 +22,17 @@ class Paginator:
 			self.compact = True
 			self._buttons = {
 		"◀️": "stop",
-		"⏹️": "plus",
-		"▶️": "minus",
+		"▶️": "plus",
+		"⏹️": "minus",
 		}
 		else:
 			self.compact = False
 			self._buttons = {
 		"⏩": "stop",
-		"▶️": "plus",
-		"⏹️": "minus",
+		"▶️": "plus",		
 		"◀️": "last",
-		"⏪": "first"
+		"⏪": "first",
+		"⏹️": "minus"
 		    }
 	
 	async def start(self, ctx):
