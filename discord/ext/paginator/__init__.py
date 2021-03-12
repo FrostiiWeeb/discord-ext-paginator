@@ -68,5 +68,4 @@ class Paginator:
 		    		with suppress(discord.Forbidden, discord.HTTPException):
 		    			for b in self._buttons:
 		    				await self.message.remove_reaction(b, self.ctx.bot.user)
-		    				
-		    break
+		    		break
