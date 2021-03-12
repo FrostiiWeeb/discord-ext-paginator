@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.0.6a4"
+version = "0.0.6a5"
 
 with open("README.md", "r") as f:
 	long_desc = f.read()
@@ -15,5 +15,5 @@ long_description=long_desc,
 long_description_content_type="text/markdown",
 description="An package for discord pagination.",
 install_requires=['discord.py>=1.5.1'],
-python_requires='>=3.8.1'
+python_requires='>=3.7.1'
 )
