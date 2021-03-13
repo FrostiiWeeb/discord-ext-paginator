@@ -89,6 +89,7 @@ class Paginator:
 		    		reaction, user = await self.ctx.bot.wait_for("reaction_add", check=check, timeout=self.timeout)
 		    		if str(reaction.emoji) == "⏹️":
 		    			await self.message.delete()
+		    			break
 		    		if str(reaction.emoji) == "▶️" and self.current != len(self._pages):
 		    			self.current += 1
 		    			await self.message.edit(embed=self._pages[self.current-1])		    			
@@ -107,5 +108,4 @@ class Paginator:
 		    	except Exception as e:
 		    		with suppress(discord.Forbidden, discord.HTTPException):
 		    			for b in self._buttons:
-		    				await self.message.remove_reaction(b, self.ctx.bot.user)
-		    		break
+		    				await self.message.remove_reaction(b, self.ctx.bot.user)		    		
