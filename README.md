@@ -7,7 +7,7 @@
 	<img alt="PyPI - Downloads" src="https://pepy.tech/badge/discord-ext-paginator">
 </a>
 
-An package for discord pagination.
+A package for discord pagination.
 
 # How to install
 
